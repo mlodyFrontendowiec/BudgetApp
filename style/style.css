@@ -1,0 +1,272 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+
+}
+
+section {
+    width: 50vw;
+    height: 100vh;
+}
+
+section.add__section {
+    background-color: #e2eaf1;
+    position: relative;
+}
+
+section.budget__section {
+    background-color: #cdd8df;
+}
+
+.add__section h1 {
+    font-family: Lato;
+    margin: 20px 0 0 10px;
+    font-size: 32px;
+}
+
+div.add__item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.input__wrapper {
+    position: relative;
+}
+
+div.input__wrapper label {
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 2px);
+    transform: translateY(-50%);
+    z-index: 1;
+    font-family: Lato;
+    font-size: 18px;
+}
+
+div.input__wrapper input {
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 4px solid grey;
+    font-size: 18px;
+    width: 220px;
+    transition: border-bottom-color .5s;
+}
+
+div.input__wrapper input:focus {
+    border-bottom-color: #21c43a;
+    outline: none;
+}
+
+div.input__wrapper input:not(:placeholder-shown)+label {
+    top: -10px;
+    left: 0;
+    font-size: 12px;
+    transition: .3s;
+}
+
+
+button.add__click {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #21c43a;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+}
+
+button.add__click i.fa-check {
+    color: white;
+}
+
+div.add__type {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+div.add__type {
+    background-color: #21c43a;
+    position: relative;
+    transition: .3s;
+
+}
+
+div.add__type span.add__first {
+    width: 60%;
+    display: block;
+    background-color: white;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    z-index: 1;
+    transition: .3s;
+
+
+}
+
+div.add__type span.add__second {
+    width: 55%;
+    display: block;
+    background-color: white;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    border-radius: 2px;
+    z-index: 1;
+    transition: .3s;
+
+
+
+}
+
+div.add__type span.add__first.remove {
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: .3s;
+}
+
+div.add__type span.add__second.remove {
+    transform: translate(-50%, -50%) rotate(180deg);
+    transition: .3s;
+}
+
+div.add__type.remove {
+    background-color: red;
+}
+
+section.budget__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    font-family: Lato;
+}
+
+h2.total {
+    margin-top: 100px;
+}
+
+h2.total span {
+    color: #21c43a;
+}
+
+
+div.incomes__wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 35%;
+}
+
+div.incomes__wrapper h2 {
+    color: #21c43a;
+}
+
+div.incomes__wrapper ul {
+    width: 100%;
+}
+
+
+div ul li {
+    margin-top: 15px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    background-color: white;
+    align-items: center;
+}
+
+div.incomes__wrapper ul li p:first-child {
+    text-transform: capitalize;
+    margin-left: 20px;
+}
+
+div.incomes__wrapper ul li p:nth-child(2) {
+    color: #21c43a;
+    margin-right: -20px;
+}
+
+div.expense__wrapper {
+    width: 35%;
+}
+
+div.expense__wrapper h2 {
+    color: red;
+}
+
+div.expense__wrapper ul {
+    width: 100%;
+}
+
+
+
+div ul li span {
+    margin-right: 10px;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    transform: translateX(10%);
+    opacity: 0;
+    transition: .4s;
+
+
+}
+
+div ul li:hover span {
+    margin-right: 10px;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    transform: translateX(0);
+    opacity: 1;
+
+}
+
+div ul li span i {
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+div.expense__wrapper ul li span i {
+    display: block;
+}
+
+div.expense__wrapper ul li p:first-child {
+    text-transform: capitalize;
+    margin-left: 20px;
+}
+
+div.expense__wrapper ul li p:nth-child(2) {
+    color: red;
+    margin-right: -20px;
+}

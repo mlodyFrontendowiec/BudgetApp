@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body>
+    <section class="add__section">
+        <h1>Budget App</h1>
+        <form data-send novalidate>
+            <div class="add__item ">
+                <div class="add__type" data-remove><span class="add__first" data-remove></span><span class="add__second"
+                        data-remove></span></div>
+                <div class="input__wrapper">
+                    <input autocomplete="off" type="text" id='description' placeholder=" " data-description>
+                    <label for="description">Description</label>
+                </div>
+                <div class="input__wrapper">
+                    <input autocomplete="off" type="number" id='value' placeholder=" " data-value>
+
+                    <label for="description">Value</label>
+                </div>
+                <button class="add__click">
+                    <i class="fas fa-check"></i></button>
+            </div>
+        </form>
+    </section>
+    <section class="budget__section">
+        <h2 class="total">Your total budget is : <span class="budget__value">0.00PLN</span></h2>
+    </section>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
